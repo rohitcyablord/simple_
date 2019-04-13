@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <title> Simple Doc </title>
+</head>
+<body class="container-fluid">
+
+  <div class="row justify-content-center">
+    <div>
+      <iframe src="https://giphy.com/embed/3o6vY7G6PrtShlMAUM" height="270" frameBorder="0" class="giphy-embed" class="col-12 col-sm-8 align-self-center" style="margin-top: 30px;"
+        allowFullScreen></iframe>
+      <p><a href="https://giphy.com/gifs/nfl-rookies-nfl-3o6vY7G6PrtShlMAUM">via GIPHY</a></p>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-8" style="margin-top: 30px;">
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Write Something</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input" id="input_f1"
+          aria-describedby="inputGroup-sizing-default">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="hi()"> &amp; send it. </button>
+          </div>
+      </div>
+
+
+    </div>
+  </div>
+  
+  <script>
+  
+    function hi(){
+      alert("hello");
+      var st = document.getElementById('input_f1').value;
+      
+
+      var xh = new XMLHttpRequest();
+      /* get method >> 
+      xh.open("GET", "http://www.iotsystem.in/notice/index.php?temp=" + st, true);
+      xh.send();
+      <</ get method */
+
+      // /* post method >> 
+      xh.open("POST", "http://www.iotsystem.in/notice/index.php", true);
+      xh.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xh.send("temp="+st);
+      // <</ post method */
+    }
+
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
