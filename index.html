@@ -30,7 +30,7 @@
         <input type="text" class="form-control" aria-label="Sizing example input" id="input_f1"
           aria-describedby="inputGroup-sizing-default">
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="hi()"> &amp; send it. </button>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="sendit()"> &amp; send it. </button>
           </div>
       </div>
 
@@ -40,12 +40,10 @@
   
   <script>
   
-    function hi(){
-      alert("hello");
+    function sendit(){
       var st = document.getElementById('input_f1').value;
-      
-
       var xh = new XMLHttpRequest();
+      
       /* get method >> 
       xh.open("GET", "http://www.iotsystem.in/notice/index.php?temp=" + st, true);
       xh.send();
